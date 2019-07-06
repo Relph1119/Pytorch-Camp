@@ -6,10 +6,10 @@ from tensorboardX import SummaryWriter
 import torch.nn.functional as F
 import torchvision.transforms as transforms
 import sys
-sys.path.append("..")
 from Code.utils.utils import MyDataset, Net, normalize_invert
 from torch.utils.data import DataLoader
 
+sys.path.append("..")
 
 vis_layer = 'conv1'
 log_dir = '../../Result/visual_featuremaps'
@@ -35,7 +35,7 @@ test_loader = DataLoader(dataset=test_data, batch_size=1)
 img, label = iter(test_loader).next()
 
 x = img
-writer = SummaryWriter(log_dir=log_dir)
+writer = SummaryWriter(logdir=log_dir)
 for name, layer in net._modules.items():
 
     # 为fc层预处理x
@@ -59,4 +59,5 @@ for name, layer in net._modules.items():
         img_raw = normalize_invert(img, normMean, normStd)  # 图像去标准化
         img_raw = np.array(img_raw * 255).clip(0, 255).squeeze().astype('uint8')
         writer.add_image('raw img', img_raw, global_step=666)  # j 表示feature map数
+
 writer.close()

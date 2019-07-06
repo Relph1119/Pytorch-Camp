@@ -27,7 +27,7 @@ max_epoch = 100
 # log
 log_dir = '../../Result/hist_grad_weight'
 
-writer = SummaryWriter(log_dir=log_dir)
+writer = SummaryWriter(logdir=log_dir)
 
 # ------------------------------------ step 1/4 : 加载数据-------------------------------------------------
 

@@ -4,7 +4,6 @@ import os
 import matplotlib.pyplot as plt
 
 
-
 def show_confMat(confusion_mat, classes_name, set_name, out_dir):
     """
     可视化混淆矩阵，保存png格式
@@ -40,7 +39,6 @@ def show_confMat(confusion_mat, classes_name, set_name, out_dir):
     plt.savefig(os.path.join(out_dir, 'Confusion_Matrix_' + set_name + '.png'))
     plt.close()
 
+
 if __name__ == '__main__':
-
     print('QQ group: {}, password: {}'.format(671103375, 2018))
-
