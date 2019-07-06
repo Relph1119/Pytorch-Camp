@@ -3,7 +3,6 @@
 import torch
 import torch.optim as optim
 
-
 w1 = torch.randn(2, 2)
 w1.requires_grad = True
 

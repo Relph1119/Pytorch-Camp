@@ -7,7 +7,7 @@ import math
 
 # ----------------------------------- CrossEntropy loss: base
 
-loss_f = nn.CrossEntropyLoss(weight=None, size_average=True, reduce=False)
+loss_f = nn.CrossEntropyLoss(weight=None, reduction='none')
 # 生成网络输出 以及 目标输出
 output = torch.ones(2, 3, requires_grad=True) * 0.5      # 假设一个三分类任务，batchsize=2，假设每个神经元输出都为0.5
 target = torch.from_numpy(np.array([0, 1])).type(torch.LongTensor)
@@ -39,7 +39,7 @@ print('第一个样本的loss：', loss_1)
 # ----------------------------------- CrossEntropy loss: weight
 
 weight = torch.from_numpy(np.array([0.6, 0.2, 0.2])).float()
-loss_f = nn.CrossEntropyLoss(weight=weight, size_average=True, reduce=False)
+loss_f = nn.CrossEntropyLoss(weight=weight, reduction='none')
 output = torch.ones(2, 3, requires_grad=True) * 0.5  # 假设一个三分类任务，batchsize为2个，假设每个神经元输出都为0.5
 target = torch.from_numpy(np.array([0, 1])).type(torch.LongTensor)
 loss = loss_f(output, target)
@@ -49,8 +49,8 @@ print('原始loss值为1.0986, 第一个样本是第0类，weight=0.6,所以输�
 
 # ----------------------------------- CrossEntropy loss: ignore_index
 
-loss_f_1 = nn.CrossEntropyLoss(weight=None, size_average=False, reduce=False, ignore_index=1)
-loss_f_2 = nn.CrossEntropyLoss(weight=None, size_average=False, reduce=False, ignore_index=2)
+loss_f_1 = nn.CrossEntropyLoss(weight=None, reduction='none', ignore_index=1)
+loss_f_2 = nn.CrossEntropyLoss(weight=None, reduction='none', ignore_index=2)
 
 output = torch.ones(3, 3, requires_grad=True) * 0.5  # 假设一个三分类任务，batchsize为2个，假设每个神经元输出都为0.5
 target = torch.from_numpy(np.array([0, 1, 2])).type(torch.LongTensor)

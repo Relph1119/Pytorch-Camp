@@ -1,13 +1,13 @@
 # coding: utf-8
 
+import numpy as np
 import torch
 import torch.nn as nn
-import numpy as np
 
 # -----------------------------------  KLDiv loss
 
-loss_f = nn.KLDivLoss(size_average=False, reduce=False)
-loss_f_mean = nn.KLDivLoss(size_average=True, reduce=True)
+loss_f = nn.KLDivLoss(reduction='none')
+loss_f_mean = nn.KLDivLoss(reduction='batchmean')
 
 # 生成网络输出 以及 目标输出
 output = torch.from_numpy(np.array([[0.1132, 0.5477, 0.3390]])).float()
@@ -18,7 +18,7 @@ loss_1 = loss_f(output, target)
 loss_mean = loss_f_mean(output, target)
 
 print('\nloss: ', loss_1)
-print('\nloss_mean: ', loss_mean)
+print('\nloss_mean: ', torch.div(loss_mean, 3))
 
 
 # 熟悉计算公式，手动计算样本的第一个元素的loss，注意这里只有一个样本，是 element-wise计算的

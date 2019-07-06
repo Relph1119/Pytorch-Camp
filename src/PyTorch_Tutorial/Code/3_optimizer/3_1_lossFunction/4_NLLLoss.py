@@ -15,7 +15,7 @@ output.requires_grad = True
 target = torch.from_numpy(np.array([0, 0])).type(torch.LongTensor)
 
 
-loss_f = nn.NLLLoss(weight=weight, size_average=True, reduce=False)
+loss_f = nn.NLLLoss(weight=weight, reduction='none')
 loss = loss_f(output, target)
 
 print('\nloss: \n', loss)

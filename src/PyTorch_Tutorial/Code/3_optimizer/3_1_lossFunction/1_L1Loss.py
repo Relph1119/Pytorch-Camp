@@ -10,14 +10,14 @@ output = torch.ones(2, 2, requires_grad=True)*0.5
 target = torch.ones(2, 2)
 
 # 设置三种不同参数的L1Loss
-reduce_False = nn.L1Loss(size_average=True, reduce=False)
-size_average_True = nn.L1Loss(size_average=True, reduce=True)
-size_average_False = nn.L1Loss(size_average=False, reduce=True)
+reduce_False = nn.L1Loss(reduction='none')
+size_average_True = nn.L1Loss(reduction='mean')
+size_average_False = nn.L1Loss(reduction='sum')
 
 o_0 = reduce_False(output, target)
 o_1 = size_average_True(output, target)
 o_2 = size_average_False(output, target)
 
-print('\nreduce=False, 输出同维度的loss:\n{}\n'.format(o_0))
-print('size_average=True，\t求平均:\t{}'.format(o_1))
-print('size_average=False，\t求和:\t{}'.format(o_2))
+print('\nreduce="none", 输出同维度的loss:\n{}\n'.format(o_0))
+print('reduction="mean"，\t求平均:\t{}'.format(o_1))
+print('reduction="sum"，\t求和:\t{}'.format(o_2))
