@@ -39,7 +39,7 @@
 &emsp;&emsp;requirements.txt文件是笔者自己的环境，配置环境如下：  
 - CUDA安装的是10.0版本  
 ![image](https://github.com/Relph1119/Pytorch-Camp/raw/master/screenshots/cuda_version.png)
-- torch版本
+- torch版本  
 ![image](https://github.com/Relph1119/Pytorch-Camp/raw/master/screenshots/test_torch.png)
-- python版本
+- python版本  
 ![image](https://github.com/Relph1119/Pytorch-Camp/raw/master/screenshots/python_version.png)
