@@ -26,7 +26,7 @@ ipywidgets==7.4.2
 itchat==1.2.32
 jedi==0.13.2
 jieba==0.39
-Jinja2==2.10
+Jinja2==2.10.1
 jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.4
@@ -47,7 +47,7 @@ moviepy==1.0.0
 nbconvert==5.4.0
 nbextensions==0.1.0
 nbformat==4.4.0
-notebook==5.7.4
+notebook==5.7.8
 numpy==1.16.3
 opencv-python==3.4.3.18
 pandas==0.23.4
@@ -94,7 +94,7 @@ torchvision==0.3.0
 tornado==5.1.1
 tqdm==4.32.2
 traitlets==4.3.2
-urllib3==1.24.1
+urllib3==1.25.3
 wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.15.4
