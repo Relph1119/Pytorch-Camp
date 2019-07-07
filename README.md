@@ -3,7 +3,7 @@
 ## 课程资料
 - [Pytorch中文文档地址](https://github.com/zergtant/pytorch-handbook)：本文档介绍了最新的Pytorch1.1的API
 - [《Pytorch模型训练实用教程》中配套代码](https://github.com/tensor-yu/PyTorch_Tutorial)
-- 本训练营的学习安排与课程任务：详见文件夹Books中的《统计学习方法作业》doc文档
+- 本训练营的学习安排与课程任务：详见文件夹Books中的《PyTorch框架班作业（第一期）》doc文档
 
 ## 课程安排
 **总课时：5 周**
