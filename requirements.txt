@@ -71,7 +71,7 @@ python-dateutil==2.7.3
 python-votesmart==0.3.3
 pytz==2018.5
 pywinpty==0.5.5
-PyYAML==5.1.1
+PyYAML==5.4
 pyzmq==17.1.2
 qtconsole==4.4.3
 requests==2.21.0
