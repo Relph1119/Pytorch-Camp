@@ -58,7 +58,7 @@ Pillow==5.2.0
 proglog==0.1.9
 prometheus-client==0.5.0
 prompt-toolkit==2.0.7
-protobuf==3.8.0
+protobuf==3.18.3
 py4j==0.10.7
 pycocotools==2.0
 Pygments==2.3.1
